@@ -4,17 +4,11 @@ margin:0;
 background:#fff5fa;
 text-align:center;
 color:#4a2c3a;
-animation: fadeIn 0.6s ease-in;
-}
-
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
 }
 
 header{
 background: linear-gradient(90deg, #ff8fc7, #ffb6d9);
-padding:35px;
+padding:30px;
 color:white;
 }
 
@@ -36,7 +30,7 @@ font-weight:bold;
 .hero{
 background:white;
 margin:20px;
-padding:30px;
+padding:25px;
 border-radius:20px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
@@ -60,8 +54,7 @@ position:relative;
 }
 
 .card:hover{
-transform: translateY(-8px) scale(1.02);
-box-shadow:0 12px 25px rgba(0,0,0,0.15);
+transform:scale(1.03);
 }
 
 img{
@@ -75,15 +68,29 @@ button{
 background:#ff69b4;
 color:white;
 border:none;
-padding:10px 15px;
-border-radius:12px;
+padding:10px;
+border-radius:10px;
 cursor:pointer;
-transition:0.3s;
+transition:0.2s;
 }
 
 button:hover{
 background:#ff4fa3;
-transform:scale(1.05);
+}
+
+button:active{
+transform:scale(0.95);
+}
+
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:#ff4fa3;
+color:white;
+padding:5px 8px;
+font-size:11px;
+border-radius:8px;
 }
 
 footer{
@@ -92,21 +99,13 @@ padding:20px;
 background:#ffe0ef;
 }
 
-/* SEARCH */
-#search{
-padding:8px;
-border-radius:10px;
-border:1px solid #ddd;
-margin-left:10px;
+/* MOBILE */
+@media(max-width:768px){
+.products{
+flex-direction:column;
+align-items:center;
 }
-
-/* DARK MODE */
-.dark{
-background:#1e1b22;
-color:white;
+.card{
+width:90%;
 }
-
-.dark .card{
-background:#2a2630;
-color:white;
 }
