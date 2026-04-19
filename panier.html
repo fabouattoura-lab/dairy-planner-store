@@ -14,19 +14,17 @@
 
 <section class="hero">
 
-<h2>Checkout 💳</h2>
-
-<p>Items: <span id="cart-count">0</span></p>
-<p>Total: <span id="total">0</span> DA</p>
+<p>Items: <span id="cart"></span></p>
+<p>Total: <span id="total"></span> DA</p>
 
 <button onclick="location.href='checkout.html'">
-Go to Checkout 💳
+Checkout 💳
 </button>
 
 </section>
 
 <script>
-document.getElementById("cart-count").innerText = localStorage.getItem("cart") || 0;
+document.getElementById("cart").innerText = localStorage.getItem("cart") || 0;
 document.getElementById("total").innerText = localStorage.getItem("total") || 0;
 </script>
 
