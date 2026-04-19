@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Checkout 💳</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Checkout 💳</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="produits.html">Shop</a>
+<a href="panier.html">Cart</a>
+<a href="checkout.html">Checkout</a>
+</nav>
+
+<section class="hero">
+
+<h2>Order Summary 🧾</h2>
+
+<p>Items: <span id="cart-count">0</span></p>
+<p>Total: <span id="total">0</span> DA</p>
+
+<h3>Shipping Info 📦</h3>
+
+<input placeholder="Full Name"><br><br>
+<input placeholder="Address"><br><br>
+<input placeholder="Phone Number"><br><br>
+
+<button onclick="placeOrder()">Place Order 💖</button>
+
+<p id="msg"></p>
+
+</section>
+
+<script>
+document.getElementById("cart-count").innerText = localStorage.getItem("cart") || 0;
+document.getElementById("total").innerText = localStorage.getItem("total") || 0;
+
+function placeOrder(){
+document.getElementById("msg").innerText =
+"Order placed successfully ✔ (demo system)";
+
+localStorage.removeItem("cart");
+localStorage.removeItem("total");
+}
+</script>
+
+</body>
+</html>
