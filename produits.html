@@ -1,59 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Products | DiaryPlanner Store ✨</title>
+<title>Products 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>Our Products 💖</h1>
-<p>Elegant stationery for organized, inspired lives ✨</p>
+<h1>Our Products 🌸</h1>
+<p>Soft aesthetic planners & journals</p>
 </header>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="produits.html">Products</a>
-<a href="panier.html">Cart</a>
+<a href="panier.html">Cart 🛒 <span id="cart-count">0</span></a>
 <a href="admin.html">Admin</a>
+<input id="search" placeholder="Search planners...">
+<button onclick="toggleDark()">🌙</button>
 </nav>
 
 <section class="hero">
-<h2>Featured Collection 🌸</h2>
-<p>Discover our aesthetic planners and journals.</p>
+<h2>Best Sellers ✨</h2>
 </section>
 
+<div class="products">
+
 <div class="card">
-<img src="planner1.jpg">
-<h3>Blossom travel Planner 🌸</h3>
+<div class="badge">SALE</div>
+<div class="heart" onclick="toggleFav(this)">♡</div>
+<img src="planner1.png">
+<h3>Blossom Planner 🌸</h3>
 <p>1800 DA</p>
-<button>Add to Cart</button>
+<button onclick="addToCart(1800)">Add to Cart</button>
+<a href="product.html"><button>View</button></a>
 </div>
 
 <div class="card">
-<img src="planner2.jpg">
-<h3>Pink Goals Journal 🎀</h3>
+<div class="heart" onclick="toggleFav(this)">♡</div>
+<img src="planner2.png">
+<h3>Pink Goals 🎀</h3>
 <p>1600 DA</p>
-<button>Add to Cart</button>
+<button onclick="addToCart(1600)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="planner3.jpg">
-<h3>Dream Life Planner ✨</h3>
+<div class="heart" onclick="toggleFav(this)">♡</div>
+<img src="planner3.png">
+<h3>Dream Life ✨</h3>
 <p>1900 DA</p>
-<button>Add to Cart</button>
+<button onclick="addToCart(1900)">Add to Cart</button>
 </div>
 
-<section class="hero">
-<h2>New Arrivals 💝</h2>
-<p>Limited edition pastel planners now available!</p>
-</section>
+</div>
 
 <footer>
-<p>© 2026 DiaryPlanner Store | Free shipping over 5000 DA 💗</p>
+<p>© 2026 DiaryPlanner Store 💗</p>
 </footer>
+
+<script>
+let count = localStorage.getItem("cart") || 0;
+document.getElementById("cart-count").innerText = count;
+
+function addToCart(price){
+count++;
+let total = localStorage.getItem("total") || 0;
+total = Number(total) + Number(price);
+
+localStorage.setItem("cart", count);
+localStorage.setItem("total", total);
+
+document.getElementById("cart-count").innerText = count;
+}
+
+function toggleFav(el){
+el.classList.toggle("active");
+el.innerText = el.classList.contains("active") ? "❤️" : "♡";
+}
+
+document.getElementById("search").addEventListener("keyup", function(){
+let value = this.value.toLowerCase();
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+card.style.display = card.innerText.toLowerCase().includes(value) ? "block":"none";
+});
+});
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
