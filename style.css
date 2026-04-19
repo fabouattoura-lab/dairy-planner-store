@@ -92,33 +92,7 @@ padding:20px;
 background:#ffe0ef;
 }
 
-/* badges */
-.badge{
-position:absolute;
-top:10px;
-left:10px;
-background:#ff4fa3;
-color:white;
-padding:5px 10px;
-border-radius:10px;
-font-size:12px;
-}
-
-/* favorites */
-.heart{
-position:absolute;
-top:10px;
-right:10px;
-font-size:20px;
-cursor:pointer;
-color:#ff4fa3;
-}
-
-.heart.active{
-color:red;
-}
-
-/* search */
+/* SEARCH */
 #search{
 padding:8px;
 border-radius:10px;
@@ -126,19 +100,7 @@ border:1px solid #ddd;
 margin-left:10px;
 }
 
-/* mobile */
-@media (max-width:768px){
-.products{
-flex-direction:column;
-align-items:center;
-}
-
-.card{
-width:90%;
-}
-}
-
-/* dark mode */
+/* DARK MODE */
 .dark{
 background:#1e1b22;
 color:white;
@@ -147,9 +109,4 @@ color:white;
 .dark .card{
 background:#2a2630;
 color:white;
-}
-
-/* UI polish */
-*{
-scroll-behavior:smooth;
 }
