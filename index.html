@@ -10,7 +10,7 @@
 
 <header>
 <h1>DiaryPlanner Store</h1>
-<p>Your online shop for diaries & planners</p>
+<p>📚 Organize your life with beautiful diaries & planners</p>
 </header>
 
 <nav>
@@ -20,25 +20,225 @@
 <a href="admin.html">Admin</a>
 </nav>
 
-<section>
+<section class="hero">
 <h2>Welcome</h2>
-<p>Discover our collection of diaries, journals and planners.</p>
+<p>Discover premium diaries, bullet journals and planners designed to organize your daily life.</p>
 </section>
 
-<section>
+<section class="products">
 <h2>Featured Products</h2>
 
-<div>
+<div class="card">
+<img src="https://via.placeholder.com/200">
 <h3>Daily Diary</h3>
-<p>Price: 1200 DA</p>
+<p>1200 DA</p>
+<button>Add to Cart</button>
 </div>
 
-<div>
+<div class="card">
+<img src="https://via.placeholder.com/200">
 <h3>Bullet Journal</h3>
-<p>Price: 1500 DA</p>
+<p>1500 DA</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Academic Planner</h3>
+<p>1800 DA</p>
+<button>Add to Cart</button>
 </div>
 
 </section>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Our Products</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="produits.html">Products</a>
+<a href="panier.html">Cart</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Weekly Planner</h3>
+<p>1300 DA</p>
+<button>Add</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Notebook</h3>
+<p>900 DA</p>
+<button>Add</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Bullet Journal Premium</h3>
+<p>2000 DA</p>
+<button>Add</button>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Your Cart</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="produits.html">Products</a>
+<a href="panier.html">Cart</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+<section class="hero">
+<h2>Items in your cart</h2>
+
+<div class="card">
+<h3>Daily Diary</h3>
+<p>1200 DA</p>
+</div>
+
+<h3>Total: 1200 DA</h3>
+
+<button>Checkout</button>
+</section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Admin Dashboard</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="produits.html">Products</a>
+<a href="panier.html">Cart</a>
+</nav>
+
+<section class="hero">
+<h2>Management Panel</h2>
+
+<ul>
+<li>✔ Add Products</li>
+<li>✔ Edit Products</li>
+<li>✔ Manage Orders</li>
+<li>✔ Manage Users</li>
+</ul>
+
+</section>
+
+</body>
+</html>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+background: linear-gradient(to right, #f4f4f4, #e8e8ff);
+text-align:center;
+}
+
+header{
+background:#1e1e2f;
+color:white;
+padding:25px;
+}
+
+nav{
+background:white;
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:15px;
+text-decoration:none;
+color:#1e1e2f;
+font-weight:bold;
+}
+
+.hero{
+background:white;
+margin:20px;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+margin:20px;
+padding:20px;
+width:250px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform: scale(1.05);
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+button{
+padding:10px 15px;
+background:#1e1e2f;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
