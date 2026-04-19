@@ -2,30 +2,72 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Product Details 🌸</title>
+<title>Shop 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>Product Details 🌸</h1>
+<h1>Our Shop 🌸</h1>
 </header>
 
-<section class="hero">
+<nav>
+<a href="index.html">Home</a>
+<a href="produits.html">Shop</a>
+<a href="panier.html">Cart 🛒 <span id="cart-count">0</span></a>
+<input id="search" placeholder="Search...">
+</nav>
 
-<img src="planner1.png" style="width:300px;border-radius:15px;">
+<section class="products">
 
-<h2>Blossom Planner 🌸</h2>
-<p>Beautiful aesthetic planner for organizing your daily life ✨</p>
+<div class="card">
+<img src="planner1.png">
+<h3>Blossom Planner 🌸</h3>
+<p>1800 DA</p>
+<button onclick="addToCart(1800)">Add to Cart</button>
+<a href="product.html"><button>View</button></a>
+</div>
 
-<h3>1800 DA</h3>
+<div class="card">
+<img src="planner2.png">
+<h3>Pink Journal 🎀</h3>
+<p>1600 DA</p>
+<button onclick="addToCart(1600)">Add to Cart</button>
+</div>
 
-<button onclick="alert('Added to cart 💖')">
-Add to Cart
-</button>
+<div class="card">
+<img src="planner3.png">
+<h3>Dream Life ✨</h3>
+<p>1900 DA</p>
+<button onclick="addToCart(1900)">Add to Cart</button>
+</div>
 
 </section>
+
+<script>
+let count = localStorage.getItem("cart") || 0;
+
+function addToCart(price){
+count++;
+let total = localStorage.getItem("total") || 0;
+total = Number(total) + Number(price);
+
+localStorage.setItem("cart", count);
+localStorage.setItem("total", total);
+
+document.getElementById("cart-count").innerText = count;
+}
+
+document.getElementById("cart-count").innerText = count;
+
+document.getElementById("search").addEventListener("keyup", function(){
+let value = this.value.toLowerCase();
+document.querySelectorAll(".card").forEach(card=>{
+card.style.display = card.innerText.toLowerCase().includes(value) ? "block":"none";
+});
+});
+</script>
 
 </body>
 </html>
