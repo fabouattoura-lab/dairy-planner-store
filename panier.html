@@ -12,29 +12,18 @@
 <h1>Your Cart 🛒</h1>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="produits.html">Products</a>
-<a href="panier.html">Cart</a>
-</nav>
-
 <section class="hero">
+
 <h2>Checkout 💳</h2>
 
 <p>Items: <span id="cart-count">0</span></p>
 <p>Total: <span id="total">0</span> DA</p>
 
-<button onclick="alert('Order placed 💖')">Place Order</button>
-</section>
+<button onclick="location.href='checkout.html'">
+Go to Checkout 💳
+</button>
 
-<section class="hero">
-<h2>Order History 📦</h2>
-<p>No past orders (demo)</p>
 </section>
-
-<footer>
-<p>© 2026 DiaryPlanner Store</p>
-</footer>
 
 <script>
 document.getElementById("cart-count").innerText = localStorage.getItem("cart") || 0;
