@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Shop 💖 DiaryPlanner</title>
+<title>Shop 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,91 +10,54 @@
 
 <header>
 <h1>Our Shop 🌸</h1>
-<p>Aesthetic planners & journals collection ✨</p>
 </header>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="produits.html">Shop</a>
-<a href="panier.html">Cart 🛒 <span id="cart-count">0</span></a>
-<input id="search" placeholder="Search products...">
+<a href="panier.html">Cart 🛒</a>
 </nav>
 
 <section class="products">
 
-<!-- PRODUCT 1 -->
 <div class="card">
+<div class="badge">BEST</div>
 <img src="planner1.png">
-<h3>Blossom Study Planner 🌸</h3>
+<h3>Blossom Planner</h3>
 <p>1800 DA</p>
-<button onclick="addToCart(1800)">Add to Cart</button>
-<a href="product.html"><button>View</button></a>
+<button onclick="addToCart(1800)">Add</button>
+<button onclick="location.href='product.html'">Quick View</button>
 </div>
 
-<!-- PRODUCT 2 -->
 <div class="card">
+<div class="badge">HOT</div>
 <img src="planner2.png">
-<h3>Pink Aesthetic Journal 🎀</h3>
+<h3>Pink Journal</h3>
 <p>1600 DA</p>
-<button onclick="addToCart(1600)">Add to Cart</button>
+<button onclick="addToCart(1600)">Add</button>
 </div>
 
-<!-- PRODUCT 3 -->
 <div class="card">
+<div class="badge">NEW</div>
 <img src="planner3.png">
-<h3>Dream Life Planner ✨</h3>
+<h3>Dream Life</h3>
 <p>1900 DA</p>
-<button onclick="addToCart(1900)">Add to Cart</button>
-</div>
-
-<!-- PRODUCT 4 -->
-<div class="card">
-<img src="https://via.placeholder.com/250x180">
-<h3>Minimal Bullet Journal 📓</h3>
-<p>1400 DA</p>
-<button onclick="addToCart(1400)">Add to Cart</button>
-</div>
-
-<!-- PRODUCT 5 -->
-<div class="card">
-<img src="https://via.placeholder.com/250x180">
-<h3>Weekly Productivity Planner 📅</h3>
-<p>1300 DA</p>
-<button onclick="addToCart(1300)">Add to Cart</button>
-</div>
-
-<!-- PRODUCT 6 -->
-<div class="card">
-<img src="https://via.placeholder.com/250x180">
-<h3>Student Academic Planner 🎓</h3>
-<p>2000 DA</p>
-<button onclick="addToCart(2000)">Add to Cart</button>
+<button onclick="addToCart(1900)">Add</button>
 </div>
 
 </section>
 
 <script>
-let count = localStorage.getItem("cart") || 0;
+let cart = localStorage.getItem("cart") || 0;
+let total = localStorage.getItem("total") || 0;
 
 function addToCart(price){
-count++;
-let total = localStorage.getItem("total") || 0;
+cart++;
 total = Number(total) + Number(price);
 
-localStorage.setItem("cart", count);
+localStorage.setItem("cart", cart);
 localStorage.setItem("total", total);
-
-document.getElementById("cart-count").innerText = count;
 }
-
-document.getElementById("cart-count").innerText = count;
-
-document.getElementById("search").addEventListener("keyup", function(){
-let value = this.value.toLowerCase();
-document.querySelectorAll(".card").forEach(card=>{
-card.style.display = card.innerText.toLowerCase().includes(value) ? "block":"none";
-});
-});
 </script>
 
 </body>
