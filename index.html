@@ -1,48 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>DiaryPlanner Store 💖</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-<h1>DiaryPlanner Store 💖</h1>
-<p>Organize your life in style ✨</p>
-</header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="produits.html">Shop</a>
-<a href="panier.html">Cart 🛒 <span id="cart-count">0</span></a>
-<a href="checkout.html">Checkout</a>
-<a href="login.html">Login</a>
-<button onclick="toggleDark()">🌙</button>
-</nav>
-
 <section class="hero">
-<h2>Welcome 🌸</h2>
-<p>Aesthetic planners for a better organized life 💗</p>
+<h2>🔥 Best Sellers</h2>
+<p>Most loved planners by our customers 💖</p>
+
+<div class="products">
+
+<!-- PRODUCT 1 -->
+<div class="card">
+<img src="planner1.png" alt="Blossom Planner">
+<h3>Blossom Planner 🌸</h3>
+<p>1800 DA</p>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="card">
+<img src="planner2.png" alt="Pink Journal">
+<h3>Pink Journal 🎀</h3>
+<p>1600 DA</p>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="card">
+<img src="planner3.png" alt="Dream Life Planner">
+<h3>Dream Life Planner ✨</h3>
+<p>1900 DA</p>
+</div>
+
+</div>
 
 <button onclick="location.href='produits.html'">
-Shop Now ✨
+View All Products 💗
 </button>
 </section>
-
-<footer>
-<p>© 2026 DiaryPlanner Store</p>
-</footer>
-
-<script>
-let count = localStorage.getItem("cart") || 0;
-document.getElementById("cart-count").innerText = count;
-
-function toggleDark(){
-document.body.classList.toggle("dark");
-}
-</script>
-
-</body>
-</html>
