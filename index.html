@@ -1,51 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>DiaryPlanner Store</title>
+<title>DiaryPlanner Store 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>DiaryPlanner Store</h1>
-<p>Organize your life with diaries & planners</p>
+<h1>DiaryPlanner Store 💖</h1>
+<p>Organize your life in style ✨</p>
 </header>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="produits.html">Products</a>
-<a href="panier.html">Cart</a>
+<a href="panier.html">Cart 🛒 <span id="cart-count">0</span></a>
 <a href="admin.html">Admin</a>
+<a href="login.html">Login</a>
+<button onclick="toggleDark()">🌙</button>
 </nav>
 
 <section class="hero">
-<h2>Welcome to DiaryPlanner Store 💖</h2>
-<p>Discover elegant planners, aesthetic journals, and cute diaries to organize your life in style.</p>
-</section>
-
-  <section class="hero">
-<h2>Best Sellers 🌸</h2>
-<div class="card">
-<h3>Pink Self-Care Diary</h3>
-<p>Our most loved planner for daily routines.</p>
-</div>
-
-<div class="card">
-<h3>Academic Planner 2026</h3>
-<p>Perfect for students and study planning.</p>
-</div>
-</section>
-
-<section class="hero">
-<h2>Why Shop With Us? 💖</h2>
-<p>✔ Cute aesthetic designs</p>
-<p>✔ Premium quality paper</p>
-<p>✔ Affordable prices</p>
-<p>✔ Fast ordering experience</p>
+<h2>Welcome 🌸</h2>
+<p>Your aesthetic planner shop starts here 💗</p>
 </section>
 
 <footer>
-<p>© 2026 DiaryPlanner Store | Contact: diaryplanner@email.com</p>
+<p>© 2026 DiaryPlanner Store</p>
 </footer>
+
+<script>
+let count = localStorage.getItem("cart") || 0;
+document.getElementById("cart-count").innerText = count;
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
